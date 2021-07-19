@@ -5,6 +5,11 @@ function updateHeight(){
 updateHeight()
 
 
+// when click on thumb show an alert
+const thumb = document.querySelector('.lastone > footer > div[thumb] > div')
+thumb.onclick = ()=>{
+    window.alert('تعالي انستا...')
+}
 
 
 /* 
@@ -20,9 +25,20 @@ body{
             span.firstWords{
                 lorem...
             }
-            lorem...
+            span{
+                lorem...
+            }
         }
     }
 }
 
 */
+
+
+
+// function scrollInto(element){
+//     element.scrollIntoView()
+// }
+// setInterval(() => {
+//     scrollInto(document.querySelector('.lastone'))
+// }, 500);

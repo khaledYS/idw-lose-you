@@ -1,8 +1,12 @@
+:root{
+    --font: Arial, Helvetica, sans-serif;
+    --border-cutter: 5px solid #333333;
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: var(--font) ;
 }
 body{
     background: #494949;
@@ -12,13 +16,15 @@ body{
 /* the heart and the animation */
 .heart{
     text-align: center;
-    font-size: 80vh;
+    font-size: 20vh;
     color: #ff1e1e;
     height: 100%;
     width: 100%;
     display: grid;
     place-items: center;
     overflow: hidden;
+    border-top: var(--border-cutter);
+    border-bottom: var(--border-cutter);
 }
 .heart > span{
     animation: heart-beat 4s ease infinite;
@@ -48,6 +54,142 @@ div.intro{
     height: 100%;
     display: grid;
     place-items: center;
+    border-bottom: var(--border-cutter);
+    border-top: var(--border-cutter);
+}
+div.intro > span{
+    text-align: center;
+    max-width: 70%;
+    background: #fff;
+    padding: 30px 40px;
+    font-size: 100%;
+    border-radius: 37px;
+    border: 5px solid #3b3b3b;
+    box-shadow: 0px 0px 20px 0px #000000;
+}
+div.intro > span > span.firstWords{
+    font-size: 200%;
+    display: block;
+    margin: 0 0 20px 0;
+    font-weight: 900;
+}
+div.intro > span > span:nth-child(2){
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+
+/* the third sec */
+.third-one{
+    border-bottom: var(--border-cutter);
+    border-top: var(--border-cutter);
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: #fff;
+}
+.third-one > span{
+    font-size: 150%;
+    text-align: center;
+    max-width: 70%;
+    background: #272727;
+    color: white;
+    padding: 30px 40px;
+    border-radius: 37px;
+    box-shadow: 0px 0px 120px 0px #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* the last one */
+.lastone{
+    border-bottom: var(--border-cutter);
+    border-top: var(--border-cutter);
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: #2b2b2b;
+    color: white;
+    position: relative;
+}
+.lastone > div{
+    text-align: center;
+    max-width: 70%;
+    padding: 30px 40px;
+    font-size: 100%;
+    border-radius: 37px;
+}
+.lastone > div > span > span[pattern]{
+    font-size: 125%;
+    font-family: fantasy;
+}
+
+.lastone > div > span > span{
+    font-size: 300%;
+    letter-spacing: -3px;
+    font-family: monospace;
+    margin:0 2px 0 0px;
+}
+.lastone > div > span{
+    font-size: 140%;
+}
+.lastone > div > span:nth-child(2){
+    font-size: 200%;
+    font-family: monospace;
+    text-align: start;
+    display: block;
+    margin: 5px 0 0 0;
+}
+.lastone > footer{
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+.lastone > footer > span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0 0 ;
+    height: 100%;
+    background: #2b2b2b;
+}
+.lastone > footer > span > span{
+    display: block;
+    font-size: 100%;
+}
+.lastone > footer > div[thumb]{
+    width: 100%;
+    height: 20%;
+    background: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lastone > footer > div[thumb] > div{
+    height: 70%;
+    width: 5%;
+    background: #141414;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 
@@ -74,3 +216,63 @@ div.intro{
 
 
 
+
+
+
+
+
+
+
+
+
+
+.showUp {
+    animation: showUp 1s ease-out ;
+}@keyframes showUp{
+    0%{
+        transform: translateY(20%);
+        opacity: 0;
+    }
+}
+
+.changeTheColorWithOpacity {
+    animation: changeTheColorWithOpacity 1s ease-out ;
+}@keyframes changeTheColorWithOpacity{
+    0%{
+        opacity: 0;
+        background: #494949;
+    }
+}
+
+
+
+.changeTheColorFromBlack {
+    animation: changeTheColorFromBlack 1s ease-out ;
+}@keyframes changeTheColorFromBlack{
+    0%,40%{
+        background: #000000;
+    }
+
+}
+
+.changeTheColorFromWhite {
+    animation: changeTheColorFromWhite 1s ease-out ;
+}@keyframes changeTheColorFromWhite{
+    0%,60%{
+        background: #ffffff;
+        border: none;
+        box-shadow:  0 0 0 0;
+    }
+
+}
+
+
+
+
+.opacity {
+    animation: opacityr 1s ease-out ;
+}@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+}
